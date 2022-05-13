@@ -1,0 +1,46 @@
+{
+  "filtData": [
+    {
+      "imageUrl": "https://cdn.pixabay.com/photo/2013/09/29/12/21/camera-188083_960_720.jpg",
+      "title": 1,
+      "price": 1000,
+      "id": "zjdfbczshj",
+      "category": "19"
+    },
+    {
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/11/22/00/51/camera-541213_960_720.jpg",
+      "title": 2,
+      "price": 2000,
+      "id": "kfhjciglgji",
+      "category": "20"
+    },
+    {
+      "imageUrl": "https://cdn.pixabay.com/photo/2019/11/09/14/28/camera-4613669_960_720.jpg",
+      "title": 3,
+      "price": 3000,
+      "id": "xuvuxidfbszi",
+      "category": "21"
+    },
+    {
+      "imageUrl": "",
+      "title": "",
+      "price": "",
+      "category": "",
+      "id": "Hs1xk_G"
+    },
+    {
+      "imageUrl": "sadcs",
+      "title": "SCSC",
+      "price": "cSCds",
+      "category": "cEDFAF",
+      "id": "eCQc-Ny"
+    },
+    {
+      "imageUrl": "",
+      "title": "dggvzd",
+      "price": "",
+      "category": "",
+      "id": "z2Le-jh"
+    }
+  ]
+}

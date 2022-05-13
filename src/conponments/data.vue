@@ -1,0 +1,101 @@
+<template>
+    <div
+        class="col-md-4 mb-4"
+        v-for="(item, index) in filtData"
+        :key="index"
+        @click="dataClick()"
+        :class="{ mactive: item.isActive === true ? true : false }"
+    >
+        <div class="card border-0 shadow">
+            <div
+                class="u-item-img"
+                :style="{ backgroundImage: `url(${item.imageUrl})` }"
+            >
+                <!-- <img :src="item.imgSrc" class="u-item-img"> -->
+                <router-link
+                    class="u-item-cover"
+                    :to="{
+                        name: 'singleitem',
+                        params: {
+                            title: item.title,
+                            price: item.price,
+                            img: item.imageUrl,
+                            category: item.category,
+                            id: item.id
+                        }
+                    }"
+                >
+                    <div class="u-item-btn">See More</div>
+                </router-link>
+            </div>
+            <div class="card-body">
+                <h6 class="card-title mt-2">
+                    <router-link
+                        class="text-dark font-weight-bold"
+                        :to="{
+                            name: 'singleitem',
+                            params: {
+                                title: item.title,
+                                price: item.price,
+                                img: item.imageUrl,
+                                category: item.category,
+                                id: item.id
+                            }
+                        }"
+                    >
+                        {{ item.title }}
+                    </router-link>
+                </h6>
+                <p class="card-text">{{ item.content }}</p>
+                <div class="h6 text-right" v-if="item.price">
+                    {{ $filters.currencyUSD(item.price) }}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+// import { defineComponent } from "@vue/runtime-core";
+// import axios from 'axios';
+
+export default {
+    data() {
+        return {
+            // filtData: []
+            filtData: [
+                {
+                    imageUrl: require('../assets/img/thumb-bg.ed62383.jpg'),
+                    title: 1,
+                    price: 1000,
+                    id: 'zjdfbczshj',
+                    category: '一九'
+                },
+                {
+                    imageUrl: require('../assets/img/world-map.e5d2493.jpg'),
+                    title: 2,
+                    price: 2000,
+                    id: 'kfhjciglgji',
+                    category: '二零'
+                },
+                {
+                    imageUrl: require('../assets/img/yellow-wall.a9d1bc5.jpg'),
+                    title: 3,
+                    price: 3000,
+                    id: 'xuvuxidfbszi',
+                    category: '二一'
+                }
+            ]
+        };
+    },
+    // mounted() {
+    //     // json-server --watch ./src/data/data.json
+    //     axios.get('http://localhost:3000/filtData').then((res) => {
+    //         this.filtData = res.data;
+    //         console.log(res);
+    //     });
+    // }
+};
+</script>
+
+<style></style>
